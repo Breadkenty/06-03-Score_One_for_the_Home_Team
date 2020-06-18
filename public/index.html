@@ -12,39 +12,54 @@
     />
   </head>
   <body>
+    <div class="background-image"></div>
     <header>
       <h1>My Score Board</h1>
     </header>
     <main>
-      <section class="team1">
-        <h2>Team 1</h2>
-        <h3>0</h3>
-        <fieldset>
-          <input type="text" placeholder="Team 1 Name" />
-        </fieldset>
+      <div class="teams">
+        <section class="team1">
+          <h3>0</h3>
+          <h2>Team 1</h2>
+          <fieldset class="input-field">
+            <input type="text" placeholder="Team 1 Name" />
+          </fieldset>
 
-        <fieldset>
-          <i class="add fas fa-2x fa-plus-circle"></i>
-          <i class="subtract fas fa-2x fa-minus-circle"></i>
-        </fieldset>
-      </section>
+          <fieldset>
+            <i class="add fas fa-2x fa-plus-circle"></i>
+            <i class="subtract fas fa-2x fa-minus-circle"></i>
+          </fieldset>
+        </section>
 
-      <section class="team2">
-        <h2>Team 2</h2>
-        <h3>0</h3>
-        <fieldset>
-          <input type="text" placeholder="Team 2 Name" />
-        </fieldset>
+        <section class="team2">
+          <h3>0</h3>
+          <h2>Team 2</h2>
+          <fieldset class="input-field">
+            <input type="text" placeholder="Team 2 Name" />
+          </fieldset>
 
-        <fieldset>
-          <i class="add fas fa-2x fa-plus-circle"></i>
-          <i class="subtract fas fa-2x fa-minus-circle"></i>
-        </fieldset>
-      </section>
+          <fieldset>
+            <i class="add fas fa-2x fa-plus-circle"></i>
+            <i class="subtract fas fa-2x fa-minus-circle"></i>
+          </fieldset>
+        </section>
+      </div>
 
-      <section class="reset">
-        <input type="button" value="Reset" />
-      </section>
+      <div class="sub-menu">
+        <section class="timer">
+          <p>10:00</p>
+          <input class="start" type="button" value="Start Timer" />
+          <!-- <input class="pause" type="button" value="Pause Timer" /> -->
+        </section>
+        <section class="quarter">
+          <h4>Quarter: <span>1st</span></h4>
+          <input type="button" value="Next Quarter" />
+        </section>
+
+        <section class="reset">
+          <input type="button" value="Reset" />
+        </section>
+      </div>
     </main>
     <script src="/main.js" charset="utf-8"></script>
   </body>

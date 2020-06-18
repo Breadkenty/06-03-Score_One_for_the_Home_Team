@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
 :root {
+  font-family: 'Roboto', sans-serif;
   font: 16px / 1 sans-serif;
 }
 
@@ -9,32 +11,92 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #1D3240;
-  color: #2b303a;
+  background-color: #021C38;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.background-image {
+  position: absolute;
+  background-image: url("https://image.freepik.com/free-vector/abstract-technology-particle-background_52683-25766.jpg");
+  filter: blur(8px);
+  /* -webkit-filter: blur(8px); */
+  /* Full height */
+  height: 100%;
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-size: 150vw 150vh;
+  z-index: -1
 }
 
 h1 {
   text-align: center;
   color: #F2F2F2;
-  font-family: Monospace;
+  font-family: Roboto;
+  text-transform: uppercase;
   margin: 1rem 0 3rem 0;
 }
 
 h2 {
+  font-family: Roboto;
+  color: #F2F2F2;
+}
+
+h3 {
+  font-family: Roboto;
+}
+
+h4 {
   color: #F2F2F2;
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: center;
 }
 
-section {
-  min-width: 20rem;
-  border: thin solid #7c7c7c;
-  border-radius: 0.3rem;
-  margin-bottom: 3rem;
+.teams {
+  display: flex;
+  justify-content: center;
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+}
+
+.teams section {
+  height: 40vh;
+  background-color: #BC130E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 15px 40px;
+}
+
+.teams section h2, h3, fieldset {
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  transform: skewY(5deg);
+}
+
+.input-field {
+  background-color: #C33941;
+  margin-bottom: 20px;
+}
+
+.teams input {
+  background-color: black;
+  border: none;
+}
+
+.sub-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +108,7 @@ section h2, section p {
 
 section h3 {
   margin: 1rem 0;
-  font-family: Monospace;
+  font-family: Roboto;
   font-size: 3rem;
   color: #F2F2F2;
 }
@@ -71,6 +133,20 @@ fieldset i.add {
 
 fieldset i.subtract {
   color: #7CA6A2;
+}
+
+.timer {
+  border: none;
+  margin: 0;
+}
+
+.timer p {
+  color: #F2F2F2;
+  margin: 0;
+}
+
+.quarter {
+  border: none;
 }
 
 .reset {
