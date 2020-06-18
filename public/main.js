@@ -12,43 +12,76 @@ function updateTeam2Value(event) {
 }
 
 function team1AddPointToScore(event) {
-  team1Score += 1
-  document.querySelector('.team1 h3').textContent = team1Score
+  if (team1Score === 21) {
+    team1Score = 21
+    console.log('team1 wins')
+  } else {
+    team1Score += 1
+    document.querySelector('.team1 h3').textContent = team1Score
+  }
 }
 
 function team2AddPointToScore(event) {
-  team2Score += 1
-  document.querySelector('.team2 h3').textContent = team2Score
+  if (team2Score === 21) {
+    team2Score = 21
+    console.log('team2 wins')
+  } else {
+    team2Score += 1
+    document.querySelector('.team2 h3').textContent = team2Score
+  }
 }
 
 function team1SubtractPointToScore(event) {
-  team1Score -= 1
-  document.querySelector('.team1 h3').textContent = team1Score
+  if (team1Score === 0) {
+    team1Score = 0
+  } else {
+    team1Score -= 1
+    document.querySelector('.team1 h3').textContent = team1Score
+  }
 }
 
 function team2SubtractPointToScore(event) {
-  team2Score -= 1
+  if (team2Score === 0) {
+    team2Score = 0
+  } else {
+    team2Score -= 1
+    document.querySelector('.team2 h3').textContent = team2Score
+  }
+}
+
+function resetPoints(event) {
+  team1Score = 0
+  team2Score = 0
+  document.querySelector('.team1 h3').textContent = team1Score
   document.querySelector('.team2 h3').textContent = team2Score
 }
 
 const main = () => {
-  const team1Input = document.querySelector('.team1 input')
-  team1Input.addEventListener('input', updateTeam1Value)
+  document
+    .querySelector('.team1 input')
+    .addEventListener('input', updateTeam1Value)
 
-  const team2Input = document.querySelector('.team2 input')
-  team2Input.addEventListener('input', updateTeam2Value)
+  document
+    .querySelector('.team2 input')
+    .addEventListener('input', updateTeam2Value)
 
-  const team1AddPoint = document.querySelector('.team1 .add')
-  team1AddPoint.addEventListener('click', team1AddPointToScore)
+  document
+    .querySelector('.team1 .add')
+    .addEventListener('click', team1AddPointToScore)
 
-  const team2AddPoint = document.querySelector('.team2 .add')
-  team2AddPoint.addEventListener('click', team2AddPointToScore)
+  document
+    .querySelector('.team2 .add')
+    .addEventListener('click', team2AddPointToScore)
 
-  const team1SubtractPoint = document.querySelector('.team1 .subtract')
-  team1SubtractPoint.addEventListener('click', team1SubtractPointToScore)
+  document
+    .querySelector('.team1 .subtract')
+    .addEventListener('click', team1SubtractPointToScore)
 
-  const team2SubtractPoint = document.querySelector('.team2 .subtract')
-  team2SubtractPoint.addEventListener('click', team2SubtractPointToScore)
+  document
+    .querySelector('.team2 .subtract')
+    .addEventListener('click', team2SubtractPointToScore)
+
+  document.querySelector('.reset input').addEventListener('click', resetPoints)
 }
 
 document.addEventListener('DOMContentLoaded', main)
