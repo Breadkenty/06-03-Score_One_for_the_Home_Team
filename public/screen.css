@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #021C38;
+  background-color: #021c38;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ body {
 
 .background-image {
   position: absolute;
-  background-image: url("https://image.freepik.com/free-vector/abstract-technology-particle-background_52683-25766.jpg");
+  background-image: url('https://image.freepik.com/free-vector/abstract-technology-particle-background_52683-25766.jpg');
   filter: blur(8px);
   /* -webkit-filter: blur(8px); */
   /* Full height */
@@ -29,12 +29,12 @@ body {
   /* Center and scale the image nicely */
   background-position: center;
   background-size: 150vw 150vh;
-  z-index: -1
+  z-index: -1;
 }
 
 h1 {
   text-align: center;
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-family: Roboto;
   text-transform: uppercase;
   margin: 1rem 0 3rem 0;
@@ -42,7 +42,7 @@ h1 {
 
 h2 {
   font-family: Roboto;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 h3 {
@@ -50,7 +50,7 @@ h3 {
 }
 
 h4 {
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 main {
@@ -70,7 +70,7 @@ main {
 
 .teams section {
   height: 40vh;
-  background-color: #BC130E;
+  background-color: #bc130e;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,7 +78,9 @@ main {
   margin: 20px 15px 40px;
 }
 
-.teams section h2, h3, fieldset {
+.teams section h2,
+h3,
+fieldset {
   -webkit-transform: skewY(5deg);
   -moz-transform: skewY(5deg);
   -ms-transform: skewY(5deg);
@@ -87,7 +89,7 @@ main {
 }
 
 .input-field {
-  background-color: #C33941;
+  background-color: #c33941;
   margin-bottom: 20px;
 }
 
@@ -102,7 +104,8 @@ main {
   align-items: center;
 }
 
-section h2, section p {
+section h2,
+section p {
   text-align: center;
 }
 
@@ -110,7 +113,7 @@ section h3 {
   margin: 1rem 0;
   font-family: Roboto;
   font-size: 3rem;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 fieldset {
@@ -128,11 +131,11 @@ fieldset i {
 }
 
 fieldset i.add {
-  color: #D2D90D;
+  color: #d2d90d;
 }
 
 fieldset i.subtract {
-  color: #7CA6A2;
+  color: #7ca6a2;
 }
 
 .timer {
@@ -141,7 +144,7 @@ fieldset i.subtract {
 }
 
 .timer p {
-  color: #F2F2F2;
+  color: #f2f2f2;
   margin: 0;
 }
 
@@ -156,7 +159,11 @@ fieldset i.subtract {
 .reset input {
   text-transform: uppercase;
   border: none;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   width: 100px;
   height: 72px;
+}
+
+.timer *:nth-child(2) {
+  border: 30px solid red;
 }
